@@ -69,13 +69,14 @@ Chanel definition for loads
 ---------------------------
 
 .. code:: python
+
     for load in loads:                        # creating channels for:
         elmres.AddVars(load, 'n:u1:bus1',     # voltage ('m:u')
                               'm:I1:bus1',     # current ('s:P1')
                               'm:Psum:bus1',   # active power ('s:P1')
                               'm:Qsum:bus1')   # reactive power ('s:Q1') 
 
-                              
+
 Power flow
 ----------
 
