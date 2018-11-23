@@ -9,7 +9,11 @@ Welcome to dsdocs's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   
+   trip_generator
 
+
+.. _ds-initialization:
 
 DigSILENT Initialization
 ------------------------
@@ -28,20 +32,32 @@ DigSILENT Initialization
     project = app.ActivateProject("name_of_project")  # change by the name of your project
     prj = app.GetActiveProject()    # active project instance
 
+.. _ds-methods:
 
-Name application methods
-------------------------
+Get application methods
+-----------------------
 
 .. code:: python
 
     ldf = app.GetFromStudyCase("ComLdf")    # Load flow
     ini = app.GetFromStudyCase('ComInc')    # Dynamic initialization
     sim = app.GetFromStudyCase('ComSim')    # Transient simulations
+ 
+ 
+.. _ds-folders:
 
+Get folders
+-----------
 
+.. code:: python
 
-Name elements
--------------
+    elmres = app.GetFromStudyCase('Results.ElmRes')  # Results folder ??
+    events_folder = app.GetFromStudyCase('IntEvt');  # to get events folder
+
+.. _ds-elements:
+
+Get elements
+------------
 
 .. code:: python
 
@@ -52,8 +68,8 @@ Name elements
 
 
 
-Chanel definition for buses
----------------------------
+Channel definition for buses
+----------------------------
 
 .. code:: python
 
@@ -65,8 +81,8 @@ Chanel definition for buses
 
 
 
-Chanel definition for loads
----------------------------
+Channel definition for loads
+----------------------------
 
 .. code:: python
 
@@ -77,12 +93,25 @@ Chanel definition for loads
                               'm:Qsum:bus1')   # reactive power ('s:Q1') 
 
 
+                              
+                              
+                              
 Power flow
 ----------
 
 .. code:: python
    
     ldf.Execute()  # executes power flow
+
+
+
+Run time simulation
+-------------------
+
+.. code:: python
+
+    ini.Execute()  # executes initialization
+    sim.Execute()  # executes simulation
 
 
 
