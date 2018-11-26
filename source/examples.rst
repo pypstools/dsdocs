@@ -3,21 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to dsdocs's documentation!
-==================================
+Examples
+========
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
    
-   getting_started
-   reference
-   examples
+   trip_generator
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

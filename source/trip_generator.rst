@@ -53,8 +53,8 @@ Power flow and run simulation
     sim.Execute()  # executes simulation
     
     
-Power flow and run simulation
------------------------------
+Export results to file
+----------------------
 
 .. code:: python
    
