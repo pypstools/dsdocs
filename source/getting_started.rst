@@ -11,15 +11,28 @@ Getting started
 DigSILENT Initialization
 ------------------------
 
+Take into account that all scripts depicted hereinafter use
+the dynamic compiled module powerfactory.pyd.
+Therefore it should be used the python version and dependencies required by powerfactory.pyd.
+
+For more information see PowerFactory user manual.
+
 .. code:: python
    
 
     import sys
-    sys.path.append(r"C:\PF15_1_7\python")
+    # Go to the powerfactory.pyd directory to import the powerfactory.pyd module
+    path = r"C:\PF15_1_7"               # PowerFactory installation absolute directory
+    sys.path.append(path + r"\python")  # Directory of the .dll and .pyd files
+    
     import powerfactory
 
     # start PowerFactory  in engine  mode
-    app = powerfactory.GetApplication('user_name','password') # change 'user_name' by your user name and 'password' by your password
+    user_name = 'user_name'         # Specify your PowerFactory user name if you have,
+                                    # otherwise use user_name = ''
+    password = 'password'           # Specify PowerFactory user name password if you have,
+                                    # otherwise use pasword = ''
+    app = powerfactory.GetApplication(user_name, password)
 
     # activate project
     project = app.ActivateProject("name_of_project")  # change by the name of your project
